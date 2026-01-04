@@ -1,0 +1,52 @@
+{
+  "ignore": {
+    "black_v": 0.15,
+    "white_s": 0.15,
+    "white_v": 0.85
+  },
+
+  "regions": [
+    {
+      "name": "yellow",
+      "h_min": 40,
+      "h_max": 70,
+      "s_min": 0.3
+    },
+    {
+      "name": "green",
+      "h_min": 80,
+      "h_max": 150,
+      "s_min": 0.3
+    },
+    {
+      "name": "red",
+      "h_min": 0,
+      "h_max": 20,
+      "s_min": 0.3
+    },
+    {
+      "name": "red",
+      "h_min": 340,
+      "h_max": 360,
+      "s_min": 0.3
+    },
+    {
+      "name": "blue",
+      "h_min": 200,
+      "h_max": 260,
+      "s_min": 0.3
+    },
+    {
+      "name": "orange",
+      "h_min": 20,
+      "h_max": 40,
+      "s_min": 0.3
+    },
+    {
+      "name": "purple",
+      "h_min": 260,
+      "h_max": 340,
+      "s_min": 0.3
+    }
+  ]
+}
