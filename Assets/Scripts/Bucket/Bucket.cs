@@ -7,7 +7,17 @@ public class Bucket : MonoBehaviour
     private Rigidbody2D rb;
     private int direction = 1; // 1 = sang phải, -1 = sang trái
 
-    public float attractForce = 10f;
+    public int capacity = 100;
+    public int currentSand = 0;
+
+    public int bucketColor = 1;
+
+    CircleCollider2D col;
+
+    void Awake()
+    {
+        col = GetComponent<CircleCollider2D>();
+    }
 
     void Start()
     {
@@ -24,14 +34,31 @@ public class Bucket : MonoBehaviour
         direction *= -1; // đảo hướng
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public bool IsFull()
     {
-        if (!other.CompareTag("Sand")) return;
+        return currentSand >= capacity;
+    }
 
-        Sand sand = other.GetComponent<Sand>();
-        if (sand != null)
-        {
-            sand.StartAttract(transform);
+    public bool IsAvailableColor(int color)
+    {
+        return color == bucketColor;
+    }
+
+    public void AddSand()
+    {
+        if (!IsFull())
+        {   
+            currentSand++;
         }
+    }
+
+    public void DeleteBucket()
+    {
+        Destroy(gameObject);
+    }
+
+    public bool ContainsPoint(Vector2 worldPos)
+    {
+        return col.OverlapPoint(worldPos);
     }
 }
