@@ -51,6 +51,8 @@
     <Compile Include="Assets\Scripts\Bucket\Bucket.cs" />
     <Compile Include="Assets\Scripts\Sand\SandController.cs" />
     <Compile Include="Assets\Scripts\Common\LevelJson.cs" />
+    <Compile Include="Assets\Scripts\Bucket\BucketLoop.cs" />
+    <Compile Include="Assets\ConveyorBelt.cs" />
     <Compile Include="Assets\Scripts\Common\ColorColorJson.cs" />
     <Compile Include="Assets\Scripts\Common\Color.cs" />
     <Compile Include="Assets\SceneLoader.cs" />

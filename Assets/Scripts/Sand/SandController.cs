@@ -61,9 +61,6 @@ public class SandController : MonoBehaviour
                 texture.SetPixel(x, y, Color.white);
             }
         }
-        Debug.Log(string.Join(", ",
-            nameToId.Select(kv => $"{kv.Key}:{kv.Value}")
-        ));
         foreach (ColorPosition region in levelConfig.regions)
         {
             grid[region.x, region.y] = nameToId[region.region];

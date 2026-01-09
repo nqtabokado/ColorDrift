@@ -2,11 +2,6 @@ using UnityEngine;
 
 public class Bucket : MonoBehaviour
 {
-    public float speed = 0.5f;
-
-    private Rigidbody2D rb;
-    private int direction = 1; // 1 = sang phải, -1 = sang trái
-
     public int capacity = 100;
     public int currentSand = 0;
 
@@ -21,18 +16,8 @@ public class Bucket : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
-    {
-        rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
-    }
-
-    void OnMouseDown()
-    {
-        direction *= -1; // đảo hướng
-    }
 
     public bool IsFull()
     {
